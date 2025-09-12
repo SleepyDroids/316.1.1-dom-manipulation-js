@@ -118,4 +118,5 @@ function getsubLinks(Links, target) {
 /*
 While incomplete, my intention is to look through both parts 1 and 2 and see if I can understand the code fully.
 Then I'll work on completing the code. 
+Hopefully I'll be able to make enough sense of it to complete the assignment. 
 */
