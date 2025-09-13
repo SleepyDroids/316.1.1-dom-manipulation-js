@@ -18,7 +18,7 @@ topMenuEl.classList.add("flex-around");
 
 // ----------------Part 3: Adding Menu Buttons--------------------
 
-var menuLinks = [
+const menuLinks = [
   { text: "about", href: "/about" },
   {
     text: "catalog",
@@ -104,6 +104,64 @@ function handleClick(e) {
     subMenuEl.style.top = "0%";
   }
 }
+
+// -------------- My attempt at the 2nd Part of Section 5 -----------
+// This is where our group left off on the lab
+
+subMenuEl.addEventListener("click", function () {
+  // prevents the default actions fo the browser
+  subMenuEl.preventDefault();
+  // if the tag name isn't <a>, immediately return
+  // aka if this isn't a link
+  if (e.target.tagName !== "A") return;
+  console.log(e.target); // couldn't confirm link aquisiton because of issue with .forEach function
+  // that I would need to debug first, decided to continue at least building out the function
+  // to gauge my understanding of the assignment.
+
+  // setting the CSS top posiiotn to be 0 from the body element
+  subMenuEl.style.top = "0";
+  // remove active class from top menuMenuLinks
+  topMenuLinks.classList.remove("active");
+
+  /*
+Update the contents of mainEl, within an <h1>, to the contents of the <a> element clicked 
+within subMenuEl. If the ABOUT link is clicked, an <h1>About</h1> should be displayed.
+  */
+ 
+// STILL A WIP
+
+  if (mainEl.textContent !== "ABOUT") {
+      subMenuEl.createElement("a");
+      document.querySelector()
+
+      // subMenuEl.innerHTML = "<h1>About</h1>";
+    } 
+  // using this as a placeholder, although I'm not convinved innerHTML is the solution
+  // since I believe that wipes out all of the html that is already in there which
+  // isn't necessarily what I want?
+  
+});
+
+/*
+Final notes: I'll concede I got lost in the syntax of this code. I know it's very well
+done and concise, but something I'd need more practice and time to achieve on my own. 
+I commend my group for how efficient and knowledgable they were and how DRY the code 
+is for sure.
+
+I also wholly concede I should've given myself more time to comb through the code,
+done some more console logging through out to figure out how the code itself was working.
+
+This also highlights my goal to improve my adaptability to work on code that I was not 
+iniitally a part of. To be able to learn what are the right questions to ask regarding the code.
+
+To clarify, I know these are weakpoints that I need to work on and improve on. Especially
+when it comes to being able to read code and understand the functionality of it. 
+
+This is definitely a lab I want to return to, maybe with the original code I worked on
+and try to figure it out on my own to see what code I may come up with or at least solutions
+that initally make sense to me.
+*/
+
 // -------------- Helper Function ---------------
 function getsubLinks(Links, target) {
   let subLinks = [];
@@ -115,8 +173,4 @@ function getsubLinks(Links, target) {
   return subLinks;
 }
 
-/*
-While incomplete, my intention is to look through both parts 1 and 2 and see if I can understand the code fully.
-Then I'll work on completing the code. 
-Hopefully I'll be able to make enough sense of it to complete the assignment. 
-*/
+
