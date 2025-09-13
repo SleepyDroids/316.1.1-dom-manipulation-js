@@ -92,6 +92,10 @@ function handleClick(e) {
       e.target.classList.add("active");
       subMenuEl.style.top = "0%";
     }
+
+    // receiving an error in the console when I click on about
+    // probably because they're no sublinks in about
+    // so there is nothing to iterate through aka the undefined error 
     const subLinks = getsubLinks(menuLinks, e.target.textContent);
     subLinks.forEach((link) => {
       const aEl = document.createElement("a");
@@ -130,7 +134,7 @@ within subMenuEl. If the ABOUT link is clicked, an <h1>About</h1> should be
  
 // STILL A WIP
 
-  if (mainEl.textContent !== "ABOUT") {
+  if (mainEl.textContent == "ABOUT") {
       subMenuEl.createElement("a");
       document.querySelector()
 
@@ -152,14 +156,14 @@ I also wholly concede I should've given myself more time to comb through the cod
 done some more console logging through out to figure out how the code itself was working.
 
 This also highlights my goal to improve my adaptability to work on code that I was not 
-iniitally a part of. To be able to learn what are the right questions to ask regarding the code.
+initially a part of. To be able to learn what are the right questions to ask regarding the code.
 
 To clarify, I know these are weakpoints that I need to work on and improve on. Especially
 when it comes to being able to read code and understand the functionality of it. 
 
 This is definitely a lab I want to return to, maybe with the original code I worked on
 and try to figure it out on my own to see what code I may come up with or at least solutions
-that initally make sense to me.
+that initially make sense to me.
 */
 
 // -------------- Helper Function ---------------
