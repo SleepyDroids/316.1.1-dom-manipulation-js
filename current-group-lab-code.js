@@ -95,7 +95,7 @@ function handleClick(e) {
 
     // receiving an error in the console when I click on about
     // probably because they're no sublinks in about
-    // so there is nothing to iterate through aka the undefined error 
+    // so there is nothing to iterate through aka the undefined error
     const subLinks = getsubLinks(menuLinks, e.target.textContent);
     subLinks.forEach((link) => {
       const aEl = document.createElement("a");
@@ -131,19 +131,20 @@ subMenuEl.addEventListener("click", function () {
 Update the contents of mainEl, within an <h1>, to the contents of the <a> element clicked 
 within subMenuEl. If the ABOUT link is clicked, an <h1>About</h1> should be displayed.
   */
- 
-// STILL A WIP
+
+  // STILL A WIP ----- I know I got lost in this section. 
 
   if (mainEl.textContent == "ABOUT") {
-      subMenuEl.createElement("a");
-      document.querySelector()
+    let subLinks = getsubLinks(menuLinks);
+    let createHeader = document.createElement("h1");
+    subMenuEl.appendChild(createHeader);
+    createHeader.textContent = "About";
 
-      // subMenuEl.innerHTML = "<h1>About</h1>";
-    } 
-  // using this as a placeholder, although I'm not convinved innerHTML is the solution
-  // since I believe that wipes out all of the html that is already in there which
-  // isn't necessarily what I want?
-  
+    // subMenuEl.innerHTML = "<h1>About</h1>";
+    // using this as a possible solutions exta placeholder, although I'm not convinved innerHTML is the solution
+    // since I believe that wipes out all of the html that is already in there which
+    // isn't necessarily what I want?
+  }
 });
 
 /*
@@ -176,5 +177,3 @@ function getsubLinks(Links, target) {
   });
   return subLinks;
 }
-
-
